@@ -1,0 +1,2 @@
+cat /etc >output.txt 2>&1
+ls -l /etc | grep ^d | wc -l
