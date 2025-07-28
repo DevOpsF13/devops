@@ -1,0 +1,1 @@
+mkdir dir cd dir touch file1.txt touch file2.txt chmod a=Rx
