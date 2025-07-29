@@ -1,0 +1,17 @@
+pipeline {
+    agent any
+
+    parameters {
+        string(name: 'HOSTNAME1', defaultValue: 'HOST1', description: 'Introdu un nume de HOSTNAME')
+        string(name: 'HOSTNAME2', defaultValue: 'HOST2', description: 'Introdu un nume de HOSTNAME2')
+        string(name: 'HOSTNAME3', defaultValue: 'HOST3', description: 'Introdu un nume de HOSTNAME3')
+    }
+
+    stages {
+        stage('Afișare Parametru') {
+            steps {
+                echo "Numele HOSTNAME-ULUI este: ${params.HOSTNAME1},${params.HOSTNAME2},${params.HOSTNAME3}"
+            }
+        }
+    }
+}
