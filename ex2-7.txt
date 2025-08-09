@@ -1,0 +1,5 @@
+docker network create custom-net --internal
+docker run -dt --name backend --network custom-net alpine sh
+docker run -dt --name frontend --network private-net -p 8082:80 nginx
+docker network connect private-net backend
+docker exec -it backend ping frontend
